@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper.min(1).css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- header html-5新增标签 头部header  底部 footer  main 主体 
+    设计稿尺寸
+    +iPhone5  320*568  DPR：2.0 尺寸 640*1136
+    +iPhone6  375*667  DPR：2.0 尺寸 750*1334（最常用）
+    +iPhone6p 414*736  DPR：3.0 尺寸 1242*2208-->
+
+    <header>
+        <h1 class="logo">
+            <a href="#"></a>
+        </h1>
+        <div class="menu">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </div>
+    </header>
+    <div class="swiper-container">
+
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="image/banner图1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="image/banner图2.png" alt=""></div>
+            <div class="swiper-slide">
+                <img src="image/banner图3.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="image/banner图4.png" alt="">
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+    </div>
+    <!-- main -->
+    <main class="conter">
+        <section class="item">
+            <div class="pic">
+                <img src="image/banner图1.png" alt="">
+            </div>
+            <div class="txt">
+                <p class="dec">Vue.js从理论精讲到项目实战课程</p>
+                <p class="pirce">￥599.00元</p>
+            </div>
+        </section>
+        <section class="item">
+            <div class="pic">
+                <img src="image/banner图1.png" alt="">
+            </div>
+            <div class="txt">
+                <p class="dec">Vue.js从理论精讲到项目实战课程</p>
+                <p class="pirce">￥599.00元</p>
+            </div>
+        </section>
+        <section class="item">
+            <div class="pic">
+                <img src="image/banner图1.png" alt="">
+            </div>
+            <div class="txt">
+                <p class="dec">Vue.js从理论精讲到项目实战课程</p>
+                <p class="pirce">￥599.00元</p>
+            </div>
+        </section>
+    </main>
+    <!-- 引入动态判断rem的脚本 -->
+    <script type="text/javascript">
+        // 动态判断rem的大小
+        function refreshRem() {
+            var desW = 750,
+                winW = document.documentElement.clientWidth,
+                ratio = winW / desW;
+            document.documentElement.style.fontSize = ratio * 100 + 'px';
+        }
+        refreshRem();
+        window.addEventListener('resize', refreshRem);
+
+
+        // swiper的初始参数       
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true, // 循环模式选项
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            // 自动切换
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false
+            }
+        })        
+    </script>
+</body>
+
+</html>
